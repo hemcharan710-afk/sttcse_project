@@ -1,0 +1,511 @@
+/* ============================================================
+   theme.qss — Global Qt Stylesheet
+   Colors match the UI screenshots exactly.
+   ============================================================ */
+
+/* ── Base ──────────────────────────────────────────────────── */
+QWidget {
+    font-family: "Inter", "SF Pro Display", "Segoe UI", sans-serif;
+    font-size: 14px;
+    color: #1A1D2E;
+}
+
+QMainWindow, QScrollArea, #content_area, #scroll_outer {
+    background-color: #F8F9FA;
+}
+
+QLabel, QCheckBox, QRadioButton {
+    background: transparent;
+}
+
+/* ── Sidebar ───────────────────────────────────────────────── */
+#sidebar {
+    background-color: #1A1D2E;
+    border-right: 1px solid #2A2D3E;
+}
+
+#sidebar QLabel {
+    color: #FFFFFF;
+}
+
+#app_name_label {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#section_label {
+    color: #6B7280;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#search_bar {
+    background-color: #2A2D3E;
+    border: 1px solid #3A3D4E;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+#search_bar::placeholder {
+    color: #6B7280;
+}
+
+/* ── Project list item ─────────────────────────────────────── */
+#project_item {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+#project_item:hover {
+    background-color: #2A2D3E;
+}
+
+#project_item[selected="true"] {
+    background-color: #2A2D3E;
+}
+
+#project_name_label {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#project_meta_label {
+    color: #6B7280;
+    font-size: 12px;
+}
+
+/* ── Main content area ─────────────────────────────────────── */
+#content_area {
+    background-color: #FFFFFF;
+}
+
+/* ── Page titles ───────────────────────────────────────────── */
+#page_title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1A1D2E;
+}
+
+#page_subtitle {
+    font-size: 15px;
+    color: #6B7280;
+}
+
+/* ── Cards (Home page) ─────────────────────────────────────── */
+#new_project_card {
+    background-color: #3B5BDB;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+#new_project_card QLabel {
+    color: #FFFFFF;
+}
+
+#open_project_card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+#card_title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#card_subtitle {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+#card_icon_btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    min-width: 56px;
+    min-height: 56px;
+}
+
+#card_icon_btn_dark {
+    background-color: #EEF2FF;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    min-width: 56px;
+    min-height: 56px;
+}
+
+/* ── Quick stats ───────────────────────────────────────────── */
+#stats_section_label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #6B7280;
+    letter-spacing: 1px;
+}
+
+#stat_number {
+    font-size: 22px;
+    font-weight: 700;
+    color: #3B5BDB;
+}
+
+#stat_label {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+#btn_primary {
+    background-color: #3B5BDB;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#btn_primary:hover {
+    background-color: #2F4AC7;
+}
+
+#btn_primary:disabled {
+    background-color: #BFC7E0;
+    color: #FFFFFF;
+}
+
+#btn_secondary {
+    background-color: #FFFFFF;
+    color: #374151;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#btn_secondary:hover {
+    background-color: #F9FAFB;
+}
+
+#btn_success {
+    background-color: #2F9E44;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#btn_success:hover {
+    background-color: #268A3A;
+}
+
+/* ── Inputs ────────────────────────────────────────────────── */
+QLineEdit, QTextEdit {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #1A1D2E;
+    selection-background-color: #EEF2FF;
+    selection-color: #3B5BDB;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border: 2px solid #3B5BDB;
+}
+
+QLineEdit:read-only {
+    background-color: #F3F4F6;
+    color: #6B7280;
+}
+
+QLineEdit::placeholder {
+    color: #9CA3AF;
+}
+
+/* ── Combo box ─────────────────────────────────────────────── */
+QComboBox {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 4px 28px 4px 10px; /* Reduced right padding so text fits */
+    font-size: 14px;
+    color: #1A1D2E;
+    min-height: 38px;
+}
+
+QComboBox:focus {
+    border: 2px solid #3B5BDB;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid transparent;
+}
+
+QComboBox::down-arrow {
+    image: none;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    selection-background-color: #EEF2FF;
+    selection-color: #3B5BDB;
+    outline: none;
+}
+
+/* ── Table widget ──────────────────────────────────────────── */
+QTableWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    gridline-color: #F3F4F6;
+    font-size: 12px;
+}
+
+QTableWidget::item {
+    padding: 8px 12px;
+    color: #374151;
+}
+
+QHeaderView::section {
+    background-color: #F9FAFB;
+    border: none;
+    border-bottom: 1px solid #E5E7EB;
+    padding: 8px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #6B7280;
+    text-transform: uppercase;
+}
+
+/* ── Validation row ────────────────────────────────────────── */
+#validation_row {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #F3F4F6;
+    padding: 12px 16px;
+    min-height: 44px;
+}
+
+#validation_row:hover {
+    background-color: #FAFAFA;
+}
+
+#validation_row_expanded {
+    background-color: #FFFBEB;
+    border-bottom: 1px solid #F3F4F6;
+    padding: 12px 16px;
+}
+
+#status_passed {
+    color: #2F9E44;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#status_warning {
+    color: #F59F00;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#status_corrected {
+    color: #2F9E44;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* ── File badge ─────────────────────────────────────────────── */
+#file_badge {
+    background-color: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    border-radius: 8px;
+    padding: 10px 16px;
+}
+
+#file_badge_label {
+    color: #065F46;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* ── Parameter verification box ────────────────────────────── */
+#param_verify_box {
+    background-color: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    border-radius: 8px;
+    padding: 14px 16px;
+}
+
+#param_verify_label {
+    color: #065F46;
+    font-size: 13px;
+}
+
+#param_section_title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3B5BDB;
+}
+
+/* ── Dialog overlay ─────────────────────────────────────────── */
+#modal_container {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+}
+
+#modal_title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1A1D2E;
+}
+
+#close_btn {
+    background-color: transparent;
+    border: 1px solid #D1D5DB;
+    border-radius: 20px;
+    color: #6B7280;
+    font-size: 14px;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+}
+
+#close_btn:hover {
+    background-color: #F3F4F6;
+}
+
+/* ── Drop zone ──────────────────────────────────────────────── */
+#drop_zone {
+    background-color: #EEF2FF;
+    border: 2px dashed #3B5BDB;
+    border-radius: 12px;
+    padding: 40px;
+}
+
+#drop_zone_label {
+    color: #374151;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ── Visualization page ─────────────────────────────────────── */
+#viz_top_bar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E5E7EB;
+    padding: 12px 24px;
+}
+
+#viz_title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1A1D2E;
+}
+
+#controls_panel {
+    background-color: #F9FAFB;
+    border-left: 1px solid #E5E7EB;
+    padding: 16px;
+    min-width: 260px;
+    max-width: 260px;
+}
+
+#controls_panel_title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1A1D2E;
+}
+
+#axis_btn {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: #374151;
+}
+
+#axis_btn[active="true"] {
+    background-color: #1A1D2E;
+    color: #FFFFFF;
+    border: 1px solid #1A1D2E;
+}
+
+#exponent_label {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1A1D2E;
+}
+
+#exponent_sub {
+    font-size: 11px;
+    color: #6B7280;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ── Export bar ─────────────────────────────────────────────── */
+#export_bar {
+    background-color: #F9FAFB;
+    border-top: 1px solid #E5E7EB;
+    padding: 12px 24px;
+}
+
+#export_label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1A1D2E;
+}
+
+#export_sub {
+    font-size: 12px;
+    color: #6B7280;
+}
+
+#btn_export {
+    background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    color: #374151;
+}
+
+#btn_export:hover {
+    background-color: #F3F4F6;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+QScrollBar:vertical {
+    background: transparent;
+    width: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background: #D1D5DB;
+    border-radius: 3px;
+    min-height: 30px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
